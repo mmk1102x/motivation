@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs"
+  },
+  {
+    "id": 2,
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "id": 3,
+    "quote": "It always seems impossible until it is done.",
+    "author": "Nelson Mandela"
+  },
+  {
+    "id": 4,
+    "quote": "Don't watch the clock; do what it does. Keep going.",
+    "author": "Sam Levenson"
+  },
+  {
+    "id": 5,
+    "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 6,
+    "quote": "You miss 100% of the shots you don't take.",
+    "author": "Wayne Gretzky"
+  },
+  {
+    "id": 7,
+    "quote": "Whether you think you can or you think you can't, you're right.",
+    "author": "Henry Ford"
+  },
+  {
+    "id": 8,
+    "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas A. Edison"
+  },
+  {
+    "id": 9,
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt"
+  },
+  {
+    "id": 10,
+    "quote": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+    "author": "Ralph Waldo Emerson"
+  },
+  {
+    "id": 11,
+    "quote": "Everything you’ve ever wanted is on the other side of fear.",
+    "author": "George Addair"
+  },
+  {
+    "id": 12,
+    "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
+    "author": "C.S. Lewis"
+  },
+  {
+    "id": 13,
+    "quote": "Believe in yourself. You are braver than you think, more talented than you know, and capable of more than you imagine.",
+    "author": "Roy T. Bennett"
+  },
+  {
+    "id": 14,
+    "quote": "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+    "author": "Nelson Mandela"
+  },
+  {
+    "id": 15,
+    "quote": "There is only one way to avoid criticism: do nothing, say nothing, and be nothing.",
+    "author": "Aristotle"
+  },
+  {
+    "id": 16,
+    "quote": "Ask and it will be given to you; search, and you will find; knock and the door will be opened for you.",
+    "author": "Jesus"
+  },
+  {
+    "id": 17,
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "id": 18,
+    "quote": "Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved.",
+    "author": "Helen Keller"
+  },
+  {
+    "id": 19,
+    "quote": "The way to get started is to quit talking and begin doing.",
+    "author": "Walt Disney"
+  },
+  {
+    "id": 20,
+    "quote": "Your time is limited, so don't waste it living someone else's life.",
+    "author": "Steve Jobs"
+  },
+  {
+    "id": 21,
+    "quote": "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.",
+    "author": "James Cameron"
+  },
+  {
+    "id": 22,
+    "quote": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon"
+  },
+  {
+    "id": 23,
+    "quote": "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+    "author": "Mother Teresa"
+  },
+  {
+    "id": 24,
+    "quote": "When you reach the end of your rope, tie a knot in it and hang on.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "id": 25,
+    "quote": "Always remember that you are absolutely unique. Just like everyone else.",
+    "author": "Margaret Mead"
+  },
+  {
+    "id": 26,
+    "quote": "Don't judge each day by the harvest you reap but by the seeds that you plant.",
+    "author": "Robert Louis Stevenson"
+  },
+  {
+    "id": 27,
+    "quote": "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+    "author": "Helen Keller"
+  },
+  {
+    "id": 28,
+    "quote": "It is during our darkest moments that we must focus to see the light.",
+    "author": "Aristotle"
+  },
+  {
+    "id": 29,
+    "quote": "Whoever is happy will make others happy too.",
+    "author": "Anne Frank"
+  },
+  {
+    "id": 30,
+    "quote": "Do not let making a living prevent you from making a life.",
+    "author": "John Wooden"
+  },
+  {
+    "id": 31,
+    "quote": "Life is really simple, but we insist on making it complicated.",
+    "author": "Confucius"
+  },
+  {
+    "id": 32,
+    "quote": "In the end, it's not the years in your life that count. It's the life in your years.",
+    "author": "Abraham Lincoln"
+  },
+  {
+    "id": 33,
+    "quote": "Life is either a daring adventure or nothing at all.",
+    "author": "Helen Keller"
+  },
+  {
+    "id": 34,
+    "quote": "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    "author": "Thomas A. Edison"
+  },
+  {
+    "id": 35,
+    "quote": "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+    "author": "Dr. Seuss"
+  },
+  {
+    "id": 36,
+    "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+    "author": "Walt Whitman"
+  },
+  {
+    "id": 37,
+    "quote": "Success usually comes to those who are too busy to be looking for it.",
+    "author": "Henry David Thoreau"
+  },
+  {
+    "id": 38,
+    "quote": "The secret of success is to do the common thing uncommonly well.",
+    "author": "John D. Rockefeller Jr."
+  },
+  {
+    "id": 39,
+    "quote": "I find that the harder I work, the more luck I seem to have.",
+    "author": "Thomas Jefferson"
+  },
+  {
+    "id": 40,
+    "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 41,
+    "quote": "Knowing is not enough; we must apply. Wishing is not enough; we must do.",
+    "author": "Johann Wolfgang von Goethe"
+  },
+  {
+    "id": 42,
+    "quote": "Imagine your life is perfect in every respect; what would it look like?",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 43,
+    "quote": "We generate fears while we sit. We overcome them by action.",
+    "author": "Dr. Henry Link"
+  },
+  {
+    "id": 44,
+    "quote": "Whether you think you can or think you can’t, you’re right.",
+    "author": "Henry Ford"
+  },
+  {
+    "id": 45,
+    "quote": "Security is mostly a superstition. Life is either a daring adventure or nothing.",
+    "author": "Helen Keller"
+  },
+  {
+    "id": 46,
+    "quote": "The man who has confidence in himself gains the confidence of others.",
+    "author": "Hasidic Proverb"
+  },
+  {
+    "id": 47,
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "id": 48,
+    "quote": "Creativity is intelligence having fun.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 49,
+    "quote": "What you lack in talent can be made up with desire, hustle and giving 110% all the time.",
+    "author": "Don Zimmer"
+  },
+  {
+    "id": 50,
+    "quote": "Do what you can with all you have, wherever you are.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "id": 51,
+    "quote": "Develop an 'attitude of gratitude'. Say thank you to everyone you meet for everything they do for you.",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 52,
+    "quote": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis"
+  },
+  {
+    "id": 53,
+    "quote": "To see what is right and not do it is a lack of courage.",
+    "author": "Confucius"
+  },
+  {
+    "id": 54,
+    "quote": "Reading is to the mind what exercise is to the body.",
+    "author": "Joseph Addison"
+  },
+  {
+    "id": 55,
+    "quote": "Fake it until you make it! Act as if you had all the confidence you require until it becomes your reality.",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 56,
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi"
+  },
+  {
+    "id": 57,
+    "quote": "We may encounter many defeats but we must not be defeated.",
+    "author": "Maya Angelou"
+  },
+  {
+    "id": 58,
+    "quote": "Go confidently in the direction of your dreams! Live the life you've imagined.",
+    "author": "Henry David Thoreau"
+  },
+  {
+    "id": 59,
+    "quote": "I attribute my success to this: I never gave or took any excuse.",
+    "author": "Florence Nightingale"
+  },
+  {
+    "id": 60,
+    "quote": "You don't have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar"
+  },
+  {
+    "id": 61,
+    "quote": "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 62,
+    "quote": "Don't let yesterday take up too much of today.",
+    "author": "Will Rogers"
+  },
+  {
+    "id": 63,
+    "quote": "It's not whether you get knocked down, it's whether you get up.",
+    "author": "Vince Lombardi"
+  },
+  {
+    "id": 64,
+    "quote": "If you are working on something that you really care about, you don't have to be pushed. The vision pulls you.",
+    "author": "Steve Jobs"
+  },
+  {
+    "id": 65,
+    "quote": "People who are crazy enough to think they can change the world, are the ones who do.",
+    "author": "Rob Siltanen"
+  },
+  {
+    "id": 66,
+    "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
+    "author": "Og Mandino"
+  },
+  {
+    "id": 67,
+    "quote": "Entrepreneurs are great at dealing with uncertainty and also very good at minimizing risk. That's the classic entrepreneur.",
+    "author": "Mohnish Pabrai"
+  },
+  {
+    "id": 68,
+    "quote": "We may encounter many defeats but we must not be defeated.",
+    "author": "Maya Angelou"
+  },
+  {
+    "id": 69,
+    "quote": "Knowing is not enough; we must apply. Wishing is not enough; we must do.",
+    "author": "Johann Wolfgang Von Goethe"
+  },
+  {
+    "id": 70,
+    "quote": "Imagine your life is perfect in every respect; what would it look like?",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 71,
+    "quote": "We generate fears while we sit. We overcome them by action.",
+    "author": "Dr. Henry Link"
+  },
+  {
+    "id": 72,
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "id": 73,
+    "quote": "Creativity is intelligence having fun.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 74,
+    "quote": "What you lack in talent can be made up with desire, hustle and giving 110% all the time.",
+    "author": "Don Zimmer"
+  },
+  {
+    "id": 75,
+    "quote": "Do what you can with all you have, wherever you are.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "id": 76,
+    "quote": "Develop an 'attitude of gratitude'. Say thank you to everyone you meet for everything they do for you.",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 77,
+    "quote": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis"
+  },
+  {
+    "id": 78,
+    "quote": "To see what is right and not do it is a lack of courage.",
+    "author": "Confucius"
+  },
+  {
+    "id": 79,
+    "quote": "Reading is to the mind what exercise is to the body.",
+    "author": "Joseph Addison"
+  },
+  {
+    "id": 80,
+    "quote": "Fake it until you make it! Act as if you had all the confidence you require until it becomes your reality.",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 81,
+    "quote": "The future depends on what you do today.",
+    "author": "Mahatma Gandhi"
+  },
+  {
+    "id": 82,
+    "quote": "Go confidently in the direction of your dreams! Live the life you've imagined.",
+    "author": "Henry David Thoreau"
+  },
+  {
+    "id": 83,
+    "quote": "I attribute my success to this: I never gave or took any excuse.",
+    "author": "Florence Nightingale"
+  },
+  {
+    "id": 84,
+    "quote": "You don't have to be great to start, but you have to start to be great.",
+    "author": "Zig Ziglar"
+  },
+  {
+    "id": 85,
+    "quote": "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 86,
+    "quote": "Don't let yesterday take up too much of today.",
+    "author": "Will Rogers"
+  },
+  {
+    "id": 87,
+    "quote": "It's not whether you get knocked down, it's whether you get up.",
+    "author": "Vince Lombardi"
+  },
+  {
+    "id": 88,
+    "quote": "If you are working on something that you really care about, you don't have to be pushed. The vision pulls you.",
+    "author": "Steve Jobs"
+  },
+  {
+    "id": 89,
+    "quote": "People who are crazy enough to think they can change the world, are the ones who do.",
+    "author": "Rob Siltanen"
+  },
+  {
+    "id": 90,
+    "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
+    "author": "Og Mandino"
+  },
+  {
+    "id": 91,
+    "quote": "Knowing is not enough; we must apply. Wishing is not enough; we must do.",
+    "author": "Johann Wolfgang Von Goethe"
+  },
+  {
+    "id": 92,
+    "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+    "author": "Franklin D. Roosevelt"
+  },
+  {
+    "id": 93,
+    "quote": "Creativity is intelligence having fun.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 94,
+    "quote": "What you lack in talent can be made up with desire, hustle and giving 110% all the time.",
+    "author": "Don Zimmer"
+  },
+  {
+    "id": 95,
+    "quote": "Do what you can with all you have, wherever you are.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "id": 96,
+    "quote": "Develop an 'attitude of gratitude'. Say thank you to everyone you meet for everything they do for you.",
+    "author": "Brian Tracy"
+  },
+  {
+    "id": 97,
+    "quote": "You are never too old to set another goal or to dream a new dream.",
+    "author": "C.S. Lewis"
+  },
+  {
+    "id": 98,
+    "quote": "To see what is right and not do it is a lack of courage.",
+    "author": "Confucius"
+  },
+  {
+    "id": 99,
+    "quote": "Reading is to the mind what exercise is to the body.",
+    "author": "Joseph Addison"
+  },
+  {
+    "id": 100,
+    "quote": "The best way to predict the future is to create it.",
+    "author": "Peter Drucker"
+  }
+]
