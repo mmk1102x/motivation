@@ -498,5 +498,505 @@
     "id": 100,
     "quote": "The best way to predict the future is to create it.",
     "author": "Peter Drucker"
+  },
+  {
+    "id": 101,
+    "quote": "It does not matter how slowly you go as long as you do not stop.",
+    "author": "Confucius"
+  },
+  {
+    "id": 102,
+    "quote": "Everything you can imagine is real.",
+    "author": "Pablo Picasso"
+  },
+  {
+    "id": 103,
+    "quote": "What we think, we become.",
+    "author": "Buddha"
+  },
+  {
+    "id": 104,
+    "quote": "Tough times never last, but tough people do.",
+    "author": "Robert H. Schuller"
+  },
+  {
+    "id": 105,
+    "quote": "The best revenge is massive success.",
+    "author": "Frank Sinatra"
+  },
+  {
+    "id": 106,
+    "quote": "Don't wait. The time will never be just right.",
+    "author": "Napoleon Hill"
+  },
+  {
+    "id": 107,
+    "quote": "If you can dream it, you can do it.",
+    "author": "Walt Disney"
+  },
+  {
+    "id": 108,
+    "quote": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson"
+  },
+  {
+    "id": 109,
+    "quote": "Go the extra mile. It's never crowded there.",
+    "author": "Dr. Wayne D. Dyer"
+  },
+  {
+    "id": 110,
+    "quote": "Keep your face to the sunshine and you cannot see a shadow.",
+    "author": "Helen Keller"
+  },
+  {
+    "id": 111,
+    "quote": "Change your thoughts and you change your world.",
+    "author": "Norman Vincent Peale"
+  },
+  {
+    "id": 112,
+    "quote": "Believe you can and you're halfway there.",
+    "author": "Theodore Roosevelt"
+  },
+  {
+    "id": 113,
+    "quote": "Happiness is not something ready made. It comes from your own actions.",
+    "author": "Dalai Lama"
+  },
+  {
+    "id": 114,
+    "quote": "Whatever you are, be a good one.",
+    "author": "Abraham Lincoln"
+  },
+  {
+    "id": 115,
+    "quote": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 116,
+    "quote": "To live is the rarest thing in the world. Most people exist, that is all.",
+    "author": "Oscar Wilde"
+  },
+  {
+    "id": 117,
+    "quote": "That which does not kill us makes us stronger.",
+    "author": "Friedrich Nietzsche"
+  },
+  {
+    "id": 118,
+    "quote": "You must be the change you wish to see in the world.",
+    "author": "Mahatma Gandhi"
+  },
+  {
+    "id": 119,
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 120,
+    "quote": "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+    "author": "Eleanor Roosevelt"
+  },
+  {
+    "id": 121,
+    "quote": "Those who dare to fail miserably can achieve greatly.",
+    "author": "John F. Kennedy"
+  },
+  {
+    "id": 122,
+    "quote": "Get busy living or get busy dying.",
+    "author": "Stephen King"
+  },
+  {
+    "id": 123,
+    "quote": "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 124,
+    "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas A. Edison"
+  },
+  {
+    "id": 125,
+    "quote": "A journey of a thousand miles begins with a single step.",
+    "author": "Lao Tzu"
+  },
+  {
+    "id": 126,
+    "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+    "author": "Ralph Waldo Emerson"
+  },
+  {
+    "id": 127,
+    "quote": "The best way out is always through.",
+    "author": "Robert Frost"
+  },
+  {
+    "id": 128,
+    "quote": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha"
+  },
+  {
+    "id": 129,
+    "quote": "Life isn't about finding yourself. Life is about creating yourself.",
+    "author": "George Bernard Shaw"
+  },
+  {
+    "id": 130,
+    "quote": "If you want to lift yourself up, lift up someone else.",
+    "author": "Booker T. Washington"
+  },
+  {
+    "id": 131,
+    "quote": "Nothing is impossible, the word itself says 'I'm possible'!",
+    "author": "Audrey Hepburn"
+  },
+  {
+    "id": 132,
+    "quote": "Whatever the mind of man can conceive and believe, it can achieve.",
+    "author": "Napoleon Hill"
+  },
+  {
+    "id": 133,
+    "quote": "First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.",
+    "author": "Aristotle"
+  },
+  {
+    "id": 134,
+    "quote": "It is never too late to be what you might have been.",
+    "author": "George Eliot"
+  },
+  {
+    "id": 135,
+    "quote": "If you do what you've always done, you'll get what you've always gotten.",
+    "author": "Tony Robbins"
+  },
+  {
+    "id": 136,
+    "quote": "I can accept failure, everyone fails at something. But I can't accept not trying.",
+    "author": "Michael Jordan"
+  },
+  {
+    "id": 137,
+    "quote": "The big lesson in life, baby, is never be scared of anyone or anything.",
+    "author": "Frank Sinatra"
+  },
+  {
+    "id": 138,
+    "quote": "Sing like no one's listening, love like you've never been hurt, dance like nobody's watching, and live like it's heaven on earth.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 139,
+    "quote": "Curiosity about life in all of its aspects, I think, is still the secret of great creative people.",
+    "author": "Leo Burnett"
+  },
+  {
+    "id": 140,
+    "quote": "Try not to become a man of success, but rather become a man of value.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 141,
+    "quote": "The weak can never forgive. Forgiveness is the attribute of the strong.",
+    "author": "Mahatma Gandhi"
+  },
+  {
+    "id": 142,
+    "quote": "Education is the most powerful weapon which you can use to change the world.",
+    "author": "Nelson Mandela"
+  },
+  {
+    "id": 143,
+    "quote": "The most difficult thing is the decision to act, the rest is merely tenacity.",
+    "author": "Amelia Earhart"
+  },
+  {
+    "id": 144,
+    "quote": "Everything has beauty, but not everyone can see.",
+    "author": "Confucius"
+  },
+  {
+    "id": 145,
+    "quote": "When I let go of what I am, I become what I might be.",
+    "author": "Lao Tzu"
+  },
+  {
+    "id": 146,
+    "quote": "Life is 10% what happens to me and 90% of how I react to it.",
+    "author": "Charles Swindoll"
+  },
+  {
+    "id": 147,
+    "quote": "The common question that gets asked in business is, 'why?' That's a good question, but an equally valid question is, 'why not?'",
+    "author": "Jeff Bezos"
+  },
+  {
+    "id": 148,
+    "quote": "Attitude is a little thing that makes a big difference.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 149,
+    "quote": "He who wonders discovers that this in itself is wonder.",
+    "author": "M.C. Escher"
+  },
+  {
+    "id": 150,
+    "quote": "If you're going through hell, keep going.",
+    "author": "Winston Churchill"
+  },
+  {
+    "id": 151,
+    "quote": "A person who never made a mistake never tried anything new.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 152,
+    "quote": "There is no charm equal to tenderness of heart.",
+    "author": "Jane Austen"
+  },
+  {
+    "id": 153,
+    "quote": "All our dreams can come true, if we have the courage to pursue them.",
+    "author": "Walt Disney"
+  },
+  {
+    "id": 154,
+    "quote": "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.",
+    "author": "Charles Darwin"
+  },
+  {
+    "id": 155,
+    "quote": "The power of imagination makes us infinite.",
+    "author": "John Muir"
+  },
+  {
+    "id": 156,
+    "quote": "Don't let the fear of losing be greater than the excitement of winning.",
+    "author": "Robert Kiyosaki"
+  },
+  {
+    "id": 157,
+    "quote": "Real integrity is doing the right thing, knowing that nobody's going to know whether you did it or not.",
+    "author": "Oprah Winfrey"
+  },
+  {
+    "id": 158,
+    "quote": "The only way to do great work is to love what you do.",
+    "author": "Steve Jobs"
+  },
+  {
+    "id": 159,
+    "quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author": "Mahatma Gandhi"
+  },
+  {
+    "id": 160,
+    "quote": "No one can make you feel inferior without your consent.",
+    "author": "Eleanor Roosevelt"
+  },
+  {
+    "id": 161,
+    "quote": "I am not a product of my circumstances. I am a product of my decisions.",
+    "author": "Stephen Covey"
+  },
+  {
+    "id": 162,
+    "quote": "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.",
+    "author": "Henry Ford"
+  },
+  {
+    "id": 163,
+    "quote": "The secret of getting ahead is getting started.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 164,
+    "quote": "Don't count the days, make the days count.",
+    "author": "Muhammad Ali"
+  },
+  {
+    "id": 165,
+    "quote": "In order to succeed, your desire for success should be greater than your fear of failure.",
+    "author": "Bill Cosby"
+  },
+  {
+    "id": 166,
+    "quote": "A room without books is like a body without a soul.",
+    "author": "Marcus Tullius Cicero"
+  },
+  {
+    "id": 167,
+    "quote": "You only live once, but if you do it right, once is enough.",
+    "author": "Mae West"
+  },
+  {
+    "id": 168,
+    "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+    "author": "Robert Frost"
+  },
+  {
+    "id": 169,
+    "quote": "If you tell the truth, you don't have to remember anything.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 170,
+    "quote": "A friend is someone who knows all about you and still loves you.",
+    "author": "Elbert Hubbard"
+  },
+  {
+    "id": 171,
+    "quote": "Always forgive your enemies; nothing annoys them so much.",
+    "author": "Oscar Wilde"
+  },
+  {
+    "id": 172,
+    "quote": "We accept the love we think we deserve.",
+    "author": "Stephen Chbosky"
+  },
+  {
+    "id": 173,
+    "quote": "Without music, life would be a mistake.",
+    "author": "Friedrich Nietzsche"
+  },
+  {
+    "id": 174,
+    "quote": "I am so clever that sometimes I don't understand a single word of what I am saying.",
+    "author": "Oscar Wilde"
+  },
+  {
+    "id": 175,
+    "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    "author": "Ralph Waldo Emerson"
+  },
+  {
+    "id": 176,
+    "quote": "Insanity is doing the same thing, over and over again, but expecting different results.",
+    "author": "Narcotics Anonymous"
+  },
+  {
+    "id": 177,
+    "quote": "It is better to be hated for what you are than to be loved for what you are not.",
+    "author": "Andre Gide"
+  },
+  {
+    "id": 178,
+    "quote": "The fool doth think he is wise, but the wise man knows himself to be a fool.",
+    "author": "William Shakespeare"
+  },
+  {
+    "id": 179,
+    "quote": "Life is what happens to us while we are making other plans.",
+    "author": "Allen Saunders"
+  },
+  {
+    "id": 180,
+    "quote": "Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
+    "author": "Mark Twain"
+  },
+  {
+    "id": 181,
+    "quote": "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.",
+    "author": "Bill Keane"
+  },
+  {
+    "id": 182,
+    "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+    "author": "Thomas A. Edison"
+  },
+  {
+    "id": 183,
+    "quote": "The person who reads too much and uses his brain too little will fall into lazy habits of thinking.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 184,
+    "quote": "You can't blame gravity for falling in love.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 185,
+    "quote": "Logic will get you from A to Z; imagination will get you everywhere.",
+    "author": "Albert Einstein"
+  },
+  {
+    "id": 186,
+    "quote": "Love all, trust a few, do wrong to none.",
+    "author": "William Shakespeare"
+  },
+  {
+    "id": 187,
+    "quote": "The only true wisdom is in knowing you know nothing.",
+    "author": "Socrates"
+  },
+  {
+    "id": 188,
+    "quote": "If you don't stand for something you will fall for anything.",
+    "author": "Malcolm X"
+  },
+  {
+    "id": 189,
+    "quote": "For every minute you are angry you lose sixty seconds of happiness.",
+    "author": "Ralph Waldo Emerson"
+  },
+  {
+    "id": 190,
+    "quote": "If you judge people, you have no time to love them.",
+    "author": "Mother Teresa"
+  },
+  {
+    "id": 191,
+    "quote": "Everything you can imagine is real.",
+    "author": "Pablo Picasso"
+  },
+  {
+    "id": 192,
+    "quote": "Sometimes the questions are complicated and the answers are simple.",
+    "author": "Dr. Seuss"
+  },
+  {
+    "id": 193,
+    "quote": "We don't see things as they are, we see them as we are.",
+    "author": "Anaïs Nin"
+  },
+  {
+    "id": 194,
+    "quote": "Beauty is in the eye of the beholder.",
+    "author": "Margaret Wolfe Hungerford"
+  },
+  {
+    "id": 195,
+    "quote": "You can't go back and change the beginning, but you can start where you are and change the ending.",
+    "author": "C.S. Lewis"
+  },
+  {
+    "id": 196,
+    "quote": "Do what you feel in your heart to be right – for you'll be criticized anyway.",
+    "author": "Eleanor Roosevelt"
+  },
+  {
+    "id": 197,
+    "quote": "Happiness depends upon ourselves.",
+    "author": "Aristotle"
+  },
+  {
+    "id": 198,
+    "quote": "Turn your wounds into wisdom.",
+    "author": "Oprah Winfrey"
+  },
+  {
+    "id": 199,
+    "quote": "The purpose of our lives is to be happy.",
+    "author": "Dalai Lama"
+  },
+  {
+    "id": 200,
+    "quote": "Life is short, and it is here to be lived.",
+    "author": "Kate Winslet"
   }
 ]
