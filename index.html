@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent; /* Removes blue tap box on mobile */
+        }
+
+        .container {
+            max-width: 85%;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+            color: #fff;
+            /* White glow, strict monochrome */
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transition: opacity 0.5s ease;
+        }
+
+        .author {
+            color: #888;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        
+        /* Hollow Button Controls */
+        .controls {
+            margin-top: 80px;
+            display: flex;
+            gap: 40px;
+            opacity: 0; 
+            transition: opacity 1s;
+        }
+
+        .btn {
+            background: transparent;
+            /* The "Contours" look */
+            border: 2px solid #555; 
+            color: #555;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 50%; /* Perfect circles */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        /* Hover effect (Desktop) */
+        .btn:hover {
+            border-color: #aaa;
+            color: #aaa;
+        }
+
+        /* Active State (When Liked/Disliked) */
+        .btn.active {
+            border-color: #fff;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Debug info */
+        .debug-info {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: #333;
+            font-size: 10px;
+            font-family: monospace;
+            pointer-events: none;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .quote { font-size: 1.8rem; }
+            .author { font-size: 1rem; margin-top: 20px; }
+            .controls { margin-top: 50px; gap: 30px; }
+            .btn { width: 50px; height: 50px; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="quote-text" class="quote"></div>
+        <div id="author-text" class="author"></div>
+    </div>
+
+    <div class="controls" id="controls">
+        <!-- SVG Icons for cleaner contours -->
+        <button class="btn" id="btn-bad" onclick="rateQuote('bad')" aria-label="Dislike">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>
+        </button>
+        <button class="btn" id="btn-good" onclick="rateQuote('good')" aria-label="Like">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+        </button>
+    </div>
+
+    <div id="debug" class="debug-info"></div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const CONFIG = {
+            jsonPath: './quotes.json',
+            hoursToWait: 3,
+            explorationChance: 0.20, // 20% chance to pick a RANDOM topic (New Topic)
+            weights: {
+                base: 50,
+                likedBonus: 15,       // Small boost for the specific quote
+                topicMatchBonus: 100, // HUGE boost for quotes with SAME MEANING
+                dislikedPenalty: 0.1  // Virtually remove disliked quotes
+            }
+        };
+
+        // --- MEANING EXTRACTION (Topics) ---
+        const TOPIC_KEYWORDS = {
+            "success": ["success", "great", "win", "victory", "work", "job", "accomplish"],
+            "resilience": ["failure", "impossible", "fall", "continue", "courage", "fatal", "halfway", "stand"],
+            "patience": ["clock", "time", "wait", "future", "now", "moment", "patience"],
+            "action": ["do", "done", "going", "way", "path", "start", "begin"],
+            "mindset": ["believe", "think", "thought", "mind", "dream"]
+        };
+
+        function analyzeTopics(text) {
+            let foundTopics = new Set();
+            const lowerText = text.toLowerCase();
+            for (const [topic, words] of Object.entries(TOPIC_KEYWORDS)) {
+                for (const word of words) {
+                    if (lowerText.includes(word)) foundTopics.add(topic);
+                }
+            }
+            // If no topic found, tag as general
+            if (foundTopics.size === 0) foundTopics.add("general");
+            return Array.from(foundTopics);
+        }
+
+        // --- STORAGE & COOKIES ---
+        let allQuotes = [];
+        let currentQuoteId = null;
+
+        function getRatings() {
+            const stored = localStorage.getItem('motivation_ratings');
+            return stored ? JSON.parse(stored) : {};
+        }
+
+        function saveRating(id, rating) {
+            const ratings = getRatings();
+            ratings[id] = rating;
+            localStorage.setItem('motivation_ratings', JSON.stringify(ratings));
+        }
+
+        function getCookie(name) {
+            const v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+            return v ? v[2] : null;
+        }
+
+        function setCookie(name, value, hours) {
+            const d = new Date();
+            d.setTime(d.getTime() + (hours * 60 * 60 * 1000));
+            document.cookie = `${name}=${value};path=/;expires=${d.toGMTString()}`;
+        }
+
+        function deleteCookie(name) {
+            document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+
+        // --- THE ALGORITHM ---
+        function selectSmartQuote(quotes) {
+            const ratings = getRatings();
+
+            // 1. Calculate Topic Scores based on history
+            let topicProfile = {};
+            quotes.forEach(q => {
+                if (ratings[q.id] === 'good' && q.topics) {
+                    q.topics.forEach(t => {
+                        topicProfile[t] = (topicProfile[t] || 0) + 1;
+                    });
+                }
+            });
+
+            // 2. Exploration Check (The "New Topic" Feature)
+            // 20% of the time, we ignore weights and pick a random quote 
+            // that is NOT in the user's top topics (if possible).
+            if (Math.random() < CONFIG.explorationChance) {
+                console.log("Mode: Exploration");
+                return quotes[Math.floor(Math.random() * quotes.length)];
+            }
+
+            // 3. Weighted Calculation
+            console.log("Mode: Smart Selection");
+            let weightedPool = [];
+
+            quotes.forEach(q => {
+                let weight = CONFIG.weights.base;
+                const userRating = ratings[q.id];
+
+                // A. Specific Quote Preference
+                if (userRating === 'good') weight += CONFIG.weights.likedBonus; 
+                if (userRating === 'bad') weight *= CONFIG.weights.dislikedPenalty; 
+
+                // B. Meaning/Topic Preference (The Heavy Lifter)
+                if (q.topics) {
+                    q.topics.forEach(t => {
+                        if (topicProfile[t] > 0) {
+                            // Add huge bonus for every matching topic preference
+                            weight += CONFIG.weights.topicMatchBonus * topicProfile[t];
+                        }
+                    });
+                }
+
+                weightedPool.push({ quote: q, weight: weight });
+            });
+
+            // 4. Select from Pool
+            const totalWeight = weightedPool.reduce((sum, item) => sum + item.weight, 0);
+            let randomValue = Math.random() * totalWeight;
+            
+            for (const item of weightedPool) {
+                randomValue -= item.weight;
+                if (randomValue <= 0) return item.quote;
+            }
+            return quotes[0];
+        }
+
+        // --- INITIALIZATION ---
+        async function init() {
+            try {
+                const response = await fetch(CONFIG.jsonPath);
+                let data = await response.json();
+
+                // Process Keywords
+                allQuotes = data.map(q => ({
+                    ...q,
+                    topics: analyzeTopics(q.quote)
+                }));
+
+                const savedId = getCookie('motivation_id');
+                const savedTime = getCookie('motivation_time');
+                const now = Date.now();
+                let selectedQuote = null;
+
+                // Check 3-Hour Cache
+                if (savedId && savedTime) {
+                    const diff = now - parseInt(savedTime);
+                    if (diff < (CONFIG.hoursToWait * 3600 * 1000)) {
+                        selectedQuote = allQuotes.find(q => q.id == savedId);
+                    }
+                }
+
+                if (!selectedQuote) {
+                    selectedQuote = selectSmartQuote(allQuotes);
+                    setCookie('motivation_id', selectedQuote.id, CONFIG.hoursToWait);
+                    setCookie('motivation_time', now.toString(), CONFIG.hoursToWait);
+                }
+
+                render(selectedQuote);
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('quote-text').innerText = "Load Error";
+            }
+        }
+
+        function render(quote) {
+            currentQuoteId = quote.id;
+            document.getElementById('quote-text').innerText = quote.quote;
+            document.getElementById('author-text').innerText = `— ${quote.author}`;
+            
+            // Debugging (Hidden mostly)
+            document.getElementById('debug').innerText = `ID: ${quote.id} | Topics: ${quote.topics.join(', ')}`;
+
+            document.getElementById('controls').style.opacity = 1;
+            updateButtonStyles();
+        }
+
+        function updateButtonStyles() {
+            const ratings = getRatings();
+            const rating = ratings[currentQuoteId];
+            
+            const btnGood = document.getElementById('btn-good');
+            const btnBad = document.getElementById('btn-bad');
+
+            // Reset classes
+            btnGood.className = 'btn';
+            btnBad.className = 'btn';
+
+            // Apply Active State
+            if (rating === 'good') btnGood.classList.add('active');
+            if (rating === 'bad') btnBad.classList.add('active');
+        }
+
+        window.rateQuote = function(type) {
+            if (!currentQuoteId) return;
+            const ratings = getRatings();
+            
+            // Toggle Logic
+            if (ratings[currentQuoteId] === type) {
+                delete ratings[currentQuoteId]; // Un-rate
+            } else {
+                saveRating(currentQuoteId, type);
+            }
+            
+            localStorage.setItem('motivation_ratings', JSON.stringify(ratings));
+            updateButtonStyles();
+
+            // If Dislike, refresh immediately
+            if (type === 'bad') {
+               deleteCookie('motivation_id');
+               deleteCookie('motivation_time');
+               document.body.style.opacity = 0; // Fade out
+               setTimeout(() => location.reload(), 300); 
+            }
+        };
+
+        init();
+    </script>
+</body>
+</html>
