@@ -77,7 +77,7 @@
             text-align: right;
             font-style: italic;
             letter-spacing: 1px;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Added soft glow to author too */
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
             opacity: 1;
             transition: opacity 0.5s;
         }
@@ -134,7 +134,6 @@
         @media (max-width: 600px) {
             .quote { 
                 font-size: 2rem; 
-                /* Adjusted massive glow for mobile screens */
                 text-shadow: 
                     0 0 10px rgba(255, 255, 255, 1),
                     0 0 30px rgba(255, 255, 255, 0.9),
@@ -223,14 +222,17 @@
             return v ? v[2] : null;
         }
 
+        // --- UPDATED COOKIE FUNCTIONS (Path Restricted) ---
         function setCookie(name, value, hours) {
             const d = new Date();
             d.setTime(d.getTime() + (hours * 60 * 60 * 1000));
-            document.cookie = `${name}=${value};path=/;expires=${d.toGMTString()}`;
+            // COOKIE LOCKED TO /motivation
+            document.cookie = `${name}=${value};path=/motivation;expires=${d.toGMTString()}`;
         }
 
         function deleteCookie(name) {
-            document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            // COOKIE LOCKED TO /motivation
+            document.cookie = name + '=; Path=/motivation; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
         }
 
         // --- ALGORITHM ---
@@ -280,7 +282,7 @@
                 const response = await fetch(CONFIG.jsonPath);
                 let data = await response.json();
                 allQuotes = data.map(q => ({ ...q, topics: analyzeTopics(q.quote) }));
-                checkTimeAndRender(true); // 'true' means first load
+                checkTimeAndRender(true);
             } catch (err) {
                 console.error(err);
                 document.getElementById('quote-text').innerText = "Load Error";
