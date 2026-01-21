@@ -18,7 +18,7 @@
             overflow: hidden;
             user-select: none;
             -webkit-tap-highlight-color: transparent;
-            perspective: 1000px; /* Essential for 3D flip */
+            perspective: 1000px;
         }
 
         .container {
@@ -29,7 +29,6 @@
         }
 
         .quote-wrapper {
-            /* Wrapper ensures 3D context stays stable */
             transform-style: preserve-3d;
         }
 
@@ -40,18 +39,20 @@
             line-height: 1.3;
             color: #fff;
             
-            /* MASSIVE GLOW (4 Layers) */
+            /* SUPERNOVA GLOW: 6 Layers of Intensity */
             text-shadow: 
-                0 0 10px rgba(255, 255, 255, 0.8),
-                0 0 30px rgba(255, 255, 255, 0.6),
-                0 0 80px rgba(255, 255, 255, 0.4),
-                0 0 120px rgba(255, 255, 255, 0.2);
+                0 0 5px rgba(255, 255, 255, 1),
+                0 0 20px rgba(255, 255, 255, 1),
+                0 0 40px rgba(255, 255, 255, 0.9),
+                0 0 80px rgba(255, 255, 255, 0.8),
+                0 0 140px rgba(255, 255, 255, 0.6),
+                0 0 200px rgba(255, 255, 255, 0.4);
 
             opacity: 1;
             transform: rotateX(0deg);
             transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1), 
                         opacity 0.6s ease;
-            backface-visibility: hidden; /* Hides the text when flipped backwards */
+            backface-visibility: hidden;
         }
 
         /* Animation Classes */
@@ -70,12 +71,13 @@
         }
 
         .author {
-            color: #888;
+            color: #aaa;
             font-size: 1.5rem;
-            margin-top: 30px;
+            margin-top: 40px;
             text-align: right;
             font-style: italic;
             letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Added soft glow to author too */
             opacity: 1;
             transition: opacity 0.5s;
         }
@@ -115,24 +117,31 @@
         .btn.active {
             border-color: #fff;
             color: #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
             transform: scale(1.1);
         }
 
-        /* Debug info */
         .debug-info {
             position: absolute;
             bottom: 10px;
             left: 10px;
-            color: #222;
+            color: #111;
             font-size: 10px;
             font-family: monospace;
             pointer-events: none;
         }
 
         @media (max-width: 600px) {
-            .quote { font-size: 2rem; text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4); }
-            .author { font-size: 1.1rem; margin-top: 20px; }
+            .quote { 
+                font-size: 2rem; 
+                /* Adjusted massive glow for mobile screens */
+                text-shadow: 
+                    0 0 10px rgba(255, 255, 255, 1),
+                    0 0 30px rgba(255, 255, 255, 0.9),
+                    0 0 60px rgba(255, 255, 255, 0.6),
+                    0 0 100px rgba(255, 255, 255, 0.4);
+            }
+            .author { font-size: 1.1rem; margin-top: 25px; }
             .controls { margin-top: 50px; gap: 30px; }
             .btn { width: 50px; height: 50px; font-size: 1.5rem; }
         }
@@ -287,27 +296,20 @@
             let shouldUpdate = true;
             let selectedQuote = null;
 
-            // 1. Check if we have a valid saved quote
             if (savedId && savedTime) {
                 const diff = now - parseInt(savedTime);
                 if (diff < timeLimit) {
                     shouldUpdate = false;
-                    // If it's first load, we must fetch the object. 
-                    // If it's a background check, and we shouldn't update, we do nothing.
                     if (isFirstLoad) {
                         selectedQuote = allQuotes.find(q => q.id == savedId);
                     }
                 }
             }
 
-            // 2. If time expired or no cookie, pick new one
             if (shouldUpdate) {
-                // Determine if we need to animate (only if not first load)
                 const animate = !isFirstLoad; 
-                
                 selectedQuote = selectSmartQuote(allQuotes);
                 
-                // Save immediately
                 setCookie('motivation_id', selectedQuote.id, CONFIG.hoursToWait);
                 setCookie('motivation_time', now.toString(), CONFIG.hoursToWait);
                 
@@ -321,8 +323,6 @@
             }
         }
 
-        // --- ANIMATION & RENDERING ---
-        
         function renderDirectly(quote) {
             currentQuoteId = quote.id;
             document.getElementById('quote-text').innerText = quote.quote;
@@ -339,30 +339,26 @@
             const qText = document.getElementById('quote-text');
             const aText = document.getElementById('author-text');
 
-            // 1. Flip Out
             qText.classList.add('flip-out');
             aText.classList.add('fade-out');
 
             setTimeout(() => {
-                // 2. Update Content (while invisible)
                 currentQuoteId = quote.id;
                 qText.innerText = quote.quote;
                 aText.innerText = `— ${quote.author}`;
                 updateButtonStyles();
                 document.getElementById('debug').innerText = `ID: ${quote.id}`;
 
-                // 3. Prepare Flip In
                 qText.classList.remove('flip-out');
                 qText.classList.add('flip-in');
                 aText.classList.remove('fade-out');
 
-                // 4. Cleanup after animation ends
                 setTimeout(() => {
                     qText.classList.remove('flip-in');
                     isAnimating = false;
-                }, 800); // match CSS animation duration
+                }, 800);
 
-            }, 600); // match CSS transition duration
+            }, 600);
         }
 
         function updateButtonStyles() {
@@ -378,7 +374,6 @@
             if (rating === 'bad') btnBad.classList.add('active');
         }
 
-        // --- USER ACTIONS ---
         window.rateQuote = function(type) {
             if (!currentQuoteId || isAnimating) return;
             const ratings = getRatings();
@@ -392,28 +387,22 @@
             localStorage.setItem('motivation_ratings', JSON.stringify(ratings));
             updateButtonStyles();
 
-            // If Dislike, force a flip immediately
             if (type === 'bad') {
                deleteCookie('motivation_id');
                deleteCookie('motivation_time');
-               // Trigger the check logic, which will see no cookie and animate a new one
                checkTimeAndRender(false);
             }
         };
 
-        // --- TIMERS & EVENTS ---
-        
-        // 1. Initial Load
+        // --- TIMERS ---
         loadData();
 
-        // 2. Check every 5 seconds (Live Update)
         setInterval(() => {
             if (!isAnimating && allQuotes.length > 0) {
                 checkTimeAndRender(false);
             }
         }, 5000);
 
-        // 3. Check immediately when user switches back to tab
         document.addEventListener("visibilitychange", () => {
             if (document.visibilityState === 'visible' && !isAnimating && allQuotes.length > 0) {
                 checkTimeAndRender(false);
